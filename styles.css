@@ -1,0 +1,43 @@
+#game {
+    perspective: 2500px;
+  }
+  
+  .card {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transform-origin: center right;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card.flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+
+  /* Estilos para la cara de atrás de la carta */
+.back-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: visible;
+  }
+  
+  /* Estilos para la cara delantera de la carta */
+  .front-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden; /* Cambia la visibilidad a "visible" */
+  }
