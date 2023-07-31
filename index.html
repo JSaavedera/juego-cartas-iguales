@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- <label for="card-count">Cantidad de cartas:</label>
+    <select id="card-count">
+      <option value="4">4</option>
+      <option value="8">8</option>
+      <option value="12">12</option>
+      <option value="16">16</option>
+      <option value="20">20</option>
+    </select>
+    <button onclick="createCards()">Crear cartas</button>
 
-<label for="card-count">Cantidad de cartas:</label>
-<select id="card-count">
-  
-  <option value="4">4</option>
-  <option value="8">8</option>
-  <option value="12">12</option>
-  <option value="16">16</option>
-  <option value="20">20</option>
-  
-</select>
-<button onclick="createCards()">Crear cartas</button>
+    Contenedor para las cartas -->
 
-    Contenedor para las cartas
-    <div id="game"></div> 
+    <div id="game">
 
+      <div class="card">
+        <img class="back-face" src="./images/card-1.png" />
+        <img class="front-face" src="./images/front-1.png"/>
+      </div>
+      <div class="card">
+        <img class="back-face" src="./images/card-1.png" />
+        <img class="front-face" src="./images/front-1.png"/>
+      </div>
+      <div class="card">
+        <img class="back-face" src="./images/card-2.png" />
+        <img class="front-face" src="./images/front-1.png"/>
+      </div>
+      <div class="card">
+        <img class="back-face" src="./images/card-2.png" />
+        <img class="front-face" src="./images/front-1.png"/>
+      </div>
 
-<script src="/main.js"></script>
-</body>
+      
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
 </html>
