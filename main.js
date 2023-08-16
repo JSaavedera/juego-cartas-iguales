@@ -3,6 +3,32 @@ const game = document.getElementById("game");
 const select = document.getElementById("card-count");
 let flippedCards = [];
 
+function createCard(cardValue, frontFaceImage, backFaceImage) {
+  // Creamos el elemento de la carta
+
+  let card = document.createElement("div");
+  card.classList.add("card");
+  card.dataset.cardValue = cardValue;
+  console.log("Creando carta con valor:", cardValue);
+
+  // Creamos la imagen de la cara de atrás de la carta
+  let backFace = document.createElement("img");
+  backFace.classList.add("back-face");
+  backFace.src = backFaceImage;
+  
+
+  // Creamos la imagen de la cara delantera de la carta
+  let frontFace = document.createElement("img");
+  frontFace.classList.add("front-face");
+  frontFace.src = frontFaceImage 
+
+  // Agregamos las imágenes a la carta y devolvemos la carta
+  card.appendChild(backFace);
+  card.appendChild(frontFace);
+  return card;
+}
+
+
 cards.forEach((card123) => card123.addEventListener("click", flipCard));
 
 
