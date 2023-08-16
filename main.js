@@ -15,12 +15,11 @@ function createCard(cardValue, frontFaceImage, backFaceImage) {
   let backFace = document.createElement("img");
   backFace.classList.add("back-face");
   backFace.src = backFaceImage;
-  
 
   // Creamos la imagen de la cara delantera de la carta
   let frontFace = document.createElement("img");
   frontFace.classList.add("front-face");
-  frontFace.src = frontFaceImage 
+  frontFace.src = frontFaceImage;
 
   // Agregamos las imágenes a la carta y devolvemos la carta
   card.appendChild(backFace);
@@ -28,19 +27,11 @@ function createCard(cardValue, frontFaceImage, backFaceImage) {
   return card;
 }
 
-
 cards.forEach((card123) => card123.addEventListener("click", flipCard));
 
-
-
 function flipCard() {
-
-
-
   this.classList.add("flipped");
   flippedCards.push(this);
-
-
 
   checkForMatch(
     flippedCards[0].dataset.cardValue,
@@ -71,5 +62,3 @@ function checkForMatch(cardValue1, cardValue2) {
     }, 1500);
   }
 }
-
-
